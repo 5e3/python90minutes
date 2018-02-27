@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- fontify -->
+
+<link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+ <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+
+<link href="./style.css" rel="stylesheet" type="text/css">
+    <title>Python Quick Reference Guide</title>
+  </head>
+  <body>
+  <div class="container">
+<p><h1>Python Quick Reference Guide</h1>
+<hr>
+<ol>
+<h3><li> <a href="#definitions" >Definitions</a></li></h3>
+<h3><li> <a href="#strings">Strings &amp; User Input</a></li></h3>
+<h3><li><a href="#if_statements" >If Statements</a></li></h3>
+<h3><li><a href="#while_loops">While loops</a></li></h3>
+<h3><li><a href="#casting">Casting</a></li></h3>
+</ol>
+<hr>
+<p>
+<p>
+<a id="definitions"><h4>Definitions</h4>
+<p><strong>Boolean Value.</strong> A value that is True or False.
+<p><strong>Boolean Expression.</strong> An expression (see below) that evaluates down to a Boolean value.
+<p><strong>Conditionals.</strong> Statements that do different things depending on a true/false expression.
+<p><strong>Control Structures.</strong> Special words that control the flow of a program -- what runs or what doesn't, or how many times some part of a program runs. If, else, elif, while are all control structures.
+<p><strong>Data Types. </strong>One of the types of data that the Python interpreter recognizes. The two we are working with today are Integer or "int" (whole numbers, positive and negative), and String or "str" (a word or other group of letters)
+<p><strong>Expression.</strong> A group of variables, operators, and other symbols that the Python interpreter will evaluate down to a single value.
+<hr>
+<a id="definitions"><h4>Strings and User Input</h4>
+Getting input from a user:
+<div class="boxed">
+<pre>username = input("What's your name? ")
+print("Hello " + username + "!" )</pre>
+</div>
+<p><p class="comments-section">Turning user input into an integer:</p>
+<div class="boxed">
+<pre class="comments-section">user_val = input("I'll tell you if your number is more than 5: ")
+user_val_int = int( user_val )
+print( user_val_int &gt; 5 )</pre>
+</div>
+<hr>
+<h4><a id="if_statements">If Statements</h4>
+
+If statements are useful when you want to make a decision in your code based on a boolean value:
+<div class="boxed"><pre># If you want to print a message, you have to use if/else. Indentation is important here. 
+user_val = input("Give me a number. I'll say if it's more than five: ")
+user_val_int = int( user_val )
+if (user_val_int &gt; 5):
+    print ( "That number is greater than five!" )
+else:
+    print ( "That number is *not* greater than five." )</pre></div>
+If there are multiple 'if' conditions you want to test, then you'll need to add some "else if" statements which Python shortens to "elif":
+<div class="boxed"><pre># To check the value of a number, there could be multiple if's. Indentation is important here. 
+user_val = input("Give me a number. I'll say if it's positive or negative: ")
+user_val_int = int( user_val )
+if (user_val_int &gt; 0):
+    print ( "I'm positive that number is positive!" )
+elif (user_val_int &lt; 0):
+    print ( "I hate to say it, but that number is negative.")
+else:
+    print ( "Yo! That number is zero!" )</pre></div>
+<hr>
+<a id="while_loops">
+<h4>While Loops</h4>
+Similar to if statements, while loops take a boolean as an argument. They will continue looping so long as the boolean is true:
+
+This program keeps asking for user input until the user types "bananas".
+<div class="boxed"><pre>user_input = ""
+while ( user_input != "bananas" ):
+ user_input = input ( "Say bananas or I'll keep asking for bananas! ")
+print ( "Thanks, we're done here. Bananas." )</pre></div>
+<hr>
+<a id="casting"><h4>Variable Types and Casting</h4>
+Python make a distinction between variables that hold strings and those that hold numbers (integers). User input always starts out as a string. You have to change or "cast" user input to an integer to do subtraction or addition, but then you have to cast it back to a string to print it out. Casting is done using the functions "str()" and "int()". You can do that like this:
+
+<div class="boxed"><pre>
+user_input = input ("Give me a number: ") 
+int_input = int ( user_input );
+int_input = int_input + 1;
+print ( "Your number plus one is " +  str ( int_input ) )
+</pre>
+
+</div>
+In the last line, the plus sign is used two different ways: the first one puts two strings together, and the second one adds the numbers like you'd expect. Python &quot;knows&quot; what to do because of the context of what the data type of the variable is.
+<hr><p>
+</div>
+</body>
+</html>
